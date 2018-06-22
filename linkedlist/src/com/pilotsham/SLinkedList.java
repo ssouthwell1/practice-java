@@ -50,24 +50,29 @@ public class SLinkedList {
         /**
          * get the value of the front item in the linked list
          */
-        Node temp = head;
-        return temp;
+        return head;
     }
 
     public Node back() {
         /**
          * get the value of the last item in the linked list
          */
-        while (head.next != null) {
-            head = head.next;
+        Node last = head;
+        while (last.next != null) {
+            last = last.next;
         }
-        return head;
+        return last;
     }
 
     public void insert(int index, int value) {
         /**
          * insert value at index, so current item at that index is pointed to by new item at index
          */
+            
+
+
+
+
     }
 
     public void remove(int index) {
