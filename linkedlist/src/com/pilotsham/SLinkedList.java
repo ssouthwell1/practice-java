@@ -68,9 +68,18 @@ public class SLinkedList {
         /**
          * insert value at index, so current item at that index is pointed to by new item at index
          */
-            
+        Node newNode = new Node(value);
+        Node tempHead = head;
+        int i = 0;
+        while (i < index) {
 
 
+        }
+        while (tempHead != null) {
+
+            tempHead = tempHead.next;
+
+        }
 
 
     }
@@ -81,10 +90,17 @@ public class SLinkedList {
          */
     }
 
-    public void size() {
+    public int size() {
         /**
          * returns the number of data elements in the list
          */
+        int length = 0;
+        Node temp = head;
+        while (temp != null) {
+            length++;
+            temp = temp.next;
+        }
+        return length;
     }
 
     public void reverse() {
@@ -99,6 +115,10 @@ public class SLinkedList {
         /**
          * Find if the key is in the list
          */
+
+
+
+
         return true;
 
     }

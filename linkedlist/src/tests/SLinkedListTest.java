@@ -13,10 +13,13 @@ public class SLinkedListTest {
     public static void main(String[] args) {
         SLinkedListTest sLinkedListTest = new SLinkedListTest();
         sLinkedListTest.addValuesToLinkedList();
+        System.out.println(sLinkedListTest.sLinkedList.size());
         sLinkedListTest.sLinkedList.pushBack(300);
 
         sLinkedListTest.sLinkedList.pushFront(12);
         sLinkedListTest.sLinkedList.popFront();
+        System.out.println(sLinkedListTest.sLinkedList.front().key);
+        System.out.println(sLinkedListTest.sLinkedList.back().key);
 //        sLinkedListTest.sLinkedList.pushBack(18);
 //        System.out.println(sLinkedListTest.sLinkedList.back().key);
 
