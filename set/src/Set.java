@@ -1,3 +1,9 @@
+import org.junit.Before;
+import org.junit.Test;
+
+import static junit.framework.TestCase.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 public class Set {
 
     int size = 0;
@@ -33,6 +39,30 @@ public class Set {
             container[size - 1] = null;
             size--;
         }
+    }
+
+    public int size() {
+        return size;
+    }
+
+    private Set one;
+    private Set many;
+    private Set set;
+
+    @Before
+    public void setUp() {
+        one = new Set();
+        many = new Set();
+        one.add("1");
+        many.add("1");
+        many.add("2");
+
+    }
+
+
+    @Test
+    public void isEmptyTest() {
+        assertEquals(2, many.size());
     }
 
 
