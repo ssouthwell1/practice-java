@@ -1,8 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import static junit.framework.TestCase.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 public class Set {
 
@@ -56,13 +55,37 @@ public class Set {
         one.add("1");
         many.add("1");
         many.add("2");
+        many.add("3");
 
     }
 
 
     @Test
     public void isEmptyTest() {
-        assertEquals(2, many.size());
+        // assertEquals(3, many.size());
+        assertFalse(many.isEmpty());
+    }
+
+    @Test
+    public void removeTest() {
+        many.remove("2");
+        assertFalse(many.contains("2"));
+
+    }
+
+    @Test
+    public void containsTest() {
+
+    }
+
+    @Test
+    public void addTest() {
+
+    }
+
+    @Test
+    public void indexOfTest() {
+        
     }
 
 
