@@ -1,13 +1,15 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class Set {
 
-    int size = 0;
+    private int size = 0;
 
-    Object[] container = new Object[10];
+    private Object[] container = new Object[10];
 
     public void add(Object obj) {
         container[size] = obj;
@@ -56,7 +58,6 @@ public class Set {
         many.add("1");
         many.add("2");
         many.add("3");
-
     }
 
 
@@ -75,17 +76,23 @@ public class Set {
 
     @Test
     public void containsTest() {
-
+        assertTrue(many.size > 0);
     }
 
     @Test
     public void addTest() {
-
+        many.add("2");
+        assertEquals(4, many.size());
     }
 
     @Test
     public void indexOfTest() {
-        
+
+    }
+
+    @Test
+    public void sizeTest() {
+        assertEquals(3, many.size);
     }
 
 

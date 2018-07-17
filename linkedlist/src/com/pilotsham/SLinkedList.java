@@ -68,6 +68,8 @@ public class SLinkedList {
         /**
          * insert value at index, so current item at that index is pointed to by new item at index
          */
+
+        // Not complete
         Node newNode = new Node(value);
         Node tempHead = head;
         int i = 0;
@@ -84,10 +86,32 @@ public class SLinkedList {
 
     }
 
-    public void remove(int index) {
+    public void remove(int position) {
         /**
          * removes node at the given index
          */
+        /**
+         * Find the previous node of the node that needs to be deleted
+         */
+        // check to make sure index if a positive number first
+
+        Node temp = head;
+
+        for (int i = 0; i < position - 1 && temp != null; i++) {
+            temp = temp.next;
+            if (temp == null || temp.next == null) {
+                System.out.println("Index does not exist in the list");
+                return; //Returns if the index is outside of the linkedlist size
+            }
+
+        }
+        Node next = temp.next.next;
+        temp.next = next; // Unlinks the deleted node from the list however it is still in memory
+
+    }
+
+    public void removeValue(int value) {
+
     }
 
     public int size() {
@@ -115,11 +139,18 @@ public class SLinkedList {
         /**
          * Find if the key is in the list
          */
+        Node temp = head;
+        while (temp != null) {
+            if (temp.key == key) {
+                return true;
+            }
+
+            temp = temp.next;
+
+        }
 
 
-
-
-        return true;
+        return false;
 
     }
 
@@ -127,7 +158,12 @@ public class SLinkedList {
         /**
          * Returns true if the list is empty
          */
-        return true;
+
+        if (head == null) {
+            return true;
+        }
+
+        return false;
     }
 
     public void addBefore(Node node, int key) {

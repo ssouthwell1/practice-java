@@ -14,12 +14,13 @@ public class SLinkedListTest {
         SLinkedListTest sLinkedListTest = new SLinkedListTest();
         sLinkedListTest.addValuesToLinkedList();
         System.out.println(sLinkedListTest.sLinkedList.size());
-        sLinkedListTest.sLinkedList.pushBack(300);
 
-        sLinkedListTest.sLinkedList.pushFront(12);
-        sLinkedListTest.sLinkedList.popFront();
-        System.out.println(sLinkedListTest.sLinkedList.front().key);
-        System.out.println(sLinkedListTest.sLinkedList.back().key);
+//        sLinkedListTest.sLinkedList.pushBack(300);
+//
+//        sLinkedListTest.sLinkedList.pushFront(12);
+//        sLinkedListTest.sLinkedList.popFront();
+//        System.out.println(sLinkedListTest.sLinkedList.front().key);
+//        System.out.println(sLinkedListTest.sLinkedList.back().key);
 //        sLinkedListTest.sLinkedList.pushBack(18);
 //        System.out.println(sLinkedListTest.sLinkedList.back().key);
 
@@ -27,6 +28,9 @@ public class SLinkedListTest {
         /**
          * Print values of the linkedList while the head is not null
          */
+        sLinkedListTest.sLinkedList.remove(8);
+        System.out.println(sLinkedListTest.sLinkedList.find(2));
+        System.out.println(sLinkedListTest.sLinkedList.find(7));
 
         sLinkedListTest.printLinkedList();
 
@@ -39,6 +43,7 @@ public class SLinkedListTest {
 
     public void addValuesToLinkedList() {
         sLinkedList.head = new Node(4);
+
         Node node2 = new Node(6);
         Node node3 = new Node(8);
         Node node4 = new Node(7);
